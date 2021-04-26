@@ -1,0 +1,12 @@
+.character {
+  background-color: #3a3a3a;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: var(--purple-300);
+    padding: 20px;
+  }
+}

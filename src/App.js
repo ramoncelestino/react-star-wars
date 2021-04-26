@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/global.scss';
+import { useEffect, useState } from 'react';
+import StarWarsCards from './Components/StarWarsCards';
+import Character from './Components/Character';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { api } from './services/api';
 
 function App() {
+  //return <PostCards posts={posts} />;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route path="/" component={StarWarsCards} exact />
+      <Route path="/characters/:id" component={Character} />
+    </Router>
   );
 }
 
 export default App;
+
+//{data.length !== 0 && <PostCard src="Teste" name={data} />}

@@ -3,6 +3,7 @@ import style from './starwarscard.module.scss';
 
 const PostCard = (props) => {
   const [hovered, setHovered] = useState(false);
+  const imgUrl = `/img/people/${props.post.id}/1.jpg`;
 
   const changeCardSize = () => {
     setHovered(true);

@@ -14,6 +14,12 @@ const CharacterFilter = (props) => {
           <option value={character.name}>{character.name}</option>
         ))}
       </select>
+      <select value={props.selectedChar} onChange={onSelectedChar}>
+        <option value="All">Planets</option>
+        {props.characters.map((character) => (
+          <option value={character.homeworld}>{character.homeworld}</option>
+        ))}
+      </select>
     </div>
   );
 };
